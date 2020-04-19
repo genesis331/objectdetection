@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/objectdetection/static/css/main.ac34f940.chunk.css",
+    "main.js": "/objectdetection/static/js/main.30383553.chunk.js",
+    "main.js.map": "/objectdetection/static/js/main.30383553.chunk.js.map",
+    "runtime-main.js": "/objectdetection/static/js/runtime-main.0b1d3be9.js",
+    "runtime-main.js.map": "/objectdetection/static/js/runtime-main.0b1d3be9.js.map",
+    "static/js/2.ec5a281a.chunk.js": "/objectdetection/static/js/2.ec5a281a.chunk.js",
+    "static/js/2.ec5a281a.chunk.js.map": "/objectdetection/static/js/2.ec5a281a.chunk.js.map",
+    "index.html": "/objectdetection/index.html",
+    "precache-manifest.f257213ecdf8961cf9be08112cb19c8a.js": "/objectdetection/precache-manifest.f257213ecdf8961cf9be08112cb19c8a.js",
+    "service-worker.js": "/objectdetection/service-worker.js",
+    "static/css/main.ac34f940.chunk.css.map": "/objectdetection/static/css/main.ac34f940.chunk.css.map",
+    "static/js/2.ec5a281a.chunk.js.LICENSE.txt": "/objectdetection/static/js/2.ec5a281a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/objectdetection/static/media/VolteBold.32ec5488.otf",
+    "static/media/githubBtnIcon.svg": "/objectdetection/static/media/githubBtnIcon.92c90f33.svg",
+    "static/media/zixuLogo.svg": "/objectdetection/static/media/zixuLogo.e0852cb2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b1d3be9.js",
+    "static/js/2.ec5a281a.chunk.js",
+    "static/css/main.ac34f940.chunk.css",
+    "static/js/main.30383553.chunk.js"
+  ]
+}
