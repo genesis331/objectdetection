@@ -23,15 +23,16 @@
     margin: 0 5rem;
 }
 
-.chart {
+.video-canvas {
     height: calc(80% - 7rem);
-    width: 90%;
-    display: inline-block;
+    width: 100%;
+    position: relative;
 }
 
-.recharts-tooltip-wrapper {
-    text-align: left;
-    color: black !important;
+.video-canvas-box {
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .footer {
