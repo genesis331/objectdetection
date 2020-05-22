@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import { Button, Modal, Text } from '@zeit-ui/react';
+import MobileBlock from "./components/mobileblock/mobileblock";
 import zixuLogo from './assets/zixuLogo.svg';
 import githubBtnIcon from './assets/githubBtnIcon.svg';
 import tensorflowIcon from './assets/tensorflowIcon.svg';
@@ -89,6 +90,7 @@ function App() {
 
     return (
         <div className="content">
+            <MobileBlock />
             <Modal open={modalState} onClose={closeHandler}>
                 <Modal.Title>Warning</Modal.Title>
                 <Modal.Content>
