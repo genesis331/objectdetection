@@ -3,6 +3,7 @@ import './App.css';
 import { Button, Modal, Text } from '@zeit-ui/react';
 import zixuLogo from './assets/zixuLogo.svg';
 import githubBtnIcon from './assets/githubBtnIcon.svg';
+import tensorflowIcon from './assets/tensorflowIcon.svg';
 const cocoSsd = require('@tensorflow-models/coco-ssd');
 
 function App() {
@@ -32,8 +33,8 @@ function App() {
             ctx.fillStyle = "#2fff00";
             const textWidth = ctx.measureText(prediction.class).width;
             const textHeight = parseInt(font, 10);
-            ctx.fillRect(x, y, textWidth + 10, textHeight + 10);
-            ctx.fillRect(x, y + height - textHeight, textWidth + 15, textHeight + 10);
+            ctx.fillRect(x, y, textWidth, textHeight);
+            ctx.fillRect(x, y + height - textHeight, textWidth, textHeight);
 
             ctx.fillStyle = "#000000";
             ctx.fillText(prediction.class, x, y);
@@ -133,13 +134,13 @@ function App() {
                     <div style={{'textAlign': 'left','height': '100%'}}>
                         <div className="footer-contents">
                             <Text h6>
-
+                                Note: This project runs on the client side ONLY, which means that nobody else will be able to see or record the image coming from your webcam.
                             </Text>
                         </div>
                     </div>
                     <div style={{'textAlign': 'right','height': '100%'}}>
                         <div className="footer-contents">
-
+                            <img src={tensorflowIcon} alt="tensorflowIcon" draggable={false} />
                         </div>
                     </div>
                 </div>
