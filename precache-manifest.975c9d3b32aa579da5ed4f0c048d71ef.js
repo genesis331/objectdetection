@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7a72a05641f937c63d83be123a114510",
+    "revision": "1b3c11e209aadec4ee4b861bb82b769e",
     "url": "/objectdetection/index.html"
   },
   {
-    "revision": "8e43830c93e43560653a",
-    "url": "/objectdetection/static/css/main.ac34f940.chunk.css"
+    "revision": "3ed41902f2d8b8896de4",
+    "url": "/objectdetection/static/css/main.03944996.chunk.css"
   },
   {
-    "revision": "5536c1206d0ff8bdbc92",
-    "url": "/objectdetection/static/js/2.ec5a281a.chunk.js"
+    "revision": "2bf2223b89140b220022",
+    "url": "/objectdetection/static/js/2.5e492780.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/objectdetection/static/js/2.ec5a281a.chunk.js.LICENSE.txt"
+    "revision": "09187598adaca7681bdff78be72e5383",
+    "url": "/objectdetection/static/js/2.5e492780.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e43830c93e43560653a",
-    "url": "/objectdetection/static/js/main.30383553.chunk.js"
+    "revision": "3ed41902f2d8b8896de4",
+    "url": "/objectdetection/static/js/main.e8d4c4b6.chunk.js"
   },
   {
     "revision": "e6d763342acd5001204c",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "92c90f334cb53d08a7ed7dbddc87da68",
     "url": "/objectdetection/static/media/githubBtnIcon.92c90f33.svg"
+  },
+  {
+    "revision": "65eb0388f95472ee540552cbb534c39a",
+    "url": "/objectdetection/static/media/tensorflowIcon.65eb0388.svg"
   },
   {
     "revision": "e0852cb27af54c561b609aca357baa44",

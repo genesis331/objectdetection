@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/objectdetection/static/css/main.ac34f940.chunk.css",
-    "main.js": "/objectdetection/static/js/main.30383553.chunk.js",
-    "main.js.map": "/objectdetection/static/js/main.30383553.chunk.js.map",
+    "main.css": "/objectdetection/static/css/main.03944996.chunk.css",
+    "main.js": "/objectdetection/static/js/main.e8d4c4b6.chunk.js",
+    "main.js.map": "/objectdetection/static/js/main.e8d4c4b6.chunk.js.map",
     "runtime-main.js": "/objectdetection/static/js/runtime-main.0b1d3be9.js",
     "runtime-main.js.map": "/objectdetection/static/js/runtime-main.0b1d3be9.js.map",
-    "static/js/2.ec5a281a.chunk.js": "/objectdetection/static/js/2.ec5a281a.chunk.js",
-    "static/js/2.ec5a281a.chunk.js.map": "/objectdetection/static/js/2.ec5a281a.chunk.js.map",
+    "static/js/2.5e492780.chunk.js": "/objectdetection/static/js/2.5e492780.chunk.js",
+    "static/js/2.5e492780.chunk.js.map": "/objectdetection/static/js/2.5e492780.chunk.js.map",
     "index.html": "/objectdetection/index.html",
-    "precache-manifest.f257213ecdf8961cf9be08112cb19c8a.js": "/objectdetection/precache-manifest.f257213ecdf8961cf9be08112cb19c8a.js",
+    "precache-manifest.975c9d3b32aa579da5ed4f0c048d71ef.js": "/objectdetection/precache-manifest.975c9d3b32aa579da5ed4f0c048d71ef.js",
     "service-worker.js": "/objectdetection/service-worker.js",
-    "static/css/main.ac34f940.chunk.css.map": "/objectdetection/static/css/main.ac34f940.chunk.css.map",
-    "static/js/2.ec5a281a.chunk.js.LICENSE.txt": "/objectdetection/static/js/2.ec5a281a.chunk.js.LICENSE.txt",
+    "static/css/main.03944996.chunk.css.map": "/objectdetection/static/css/main.03944996.chunk.css.map",
+    "static/js/2.5e492780.chunk.js.LICENSE.txt": "/objectdetection/static/js/2.5e492780.chunk.js.LICENSE.txt",
     "static/media/App.css": "/objectdetection/static/media/VolteBold.32ec5488.otf",
     "static/media/githubBtnIcon.svg": "/objectdetection/static/media/githubBtnIcon.92c90f33.svg",
+    "static/media/tensorflowIcon.svg": "/objectdetection/static/media/tensorflowIcon.65eb0388.svg",
     "static/media/zixuLogo.svg": "/objectdetection/static/media/zixuLogo.e0852cb2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0b1d3be9.js",
-    "static/js/2.ec5a281a.chunk.js",
-    "static/css/main.ac34f940.chunk.css",
-    "static/js/main.30383553.chunk.js"
+    "static/js/2.5e492780.chunk.js",
+    "static/css/main.03944996.chunk.css",
+    "static/js/main.e8d4c4b6.chunk.js"
   ]
 }
