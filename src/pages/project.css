@@ -1,0 +1,15 @@
+.content {
+    height: calc(100% - 4rem);
+}
+
+.video-canvas {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.video-canvas-box {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

@@ -1,153 +1,65 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Button, Modal, Text } from '@zeit-ui/react';
-import MobileBlock from "./components/mobileblock/mobileblock";
-import zixuLogo from './assets/zixuLogo.svg';
-import githubBtnIcon from './assets/githubBtnIcon.svg';
-import tensorflowIcon from './assets/tensorflowIcon.svg';
-const cocoSsd = require('@tensorflow-models/coco-ssd');
+import Project from './pages/project';
+import Overview from './pages/overview';
+import { GeistProvider, CssBaseline } from '@geist-ui/react';
+import { Mode, useLightSwitch } from 'use-light-switch';
+import { Note, Spacer, Description, Tabs, Text } from '@geist-ui/react';
+import { AlertOctagon } from '@geist-ui/react-icons';
+import logoblack from './assets/LOGO-BLACK-WEB.svg';
+import logowhite from './assets/LOGO-WHITE-WEB.svg';
 
 function App() {
-    const [modalState, setModalState] = useState(false);
-    const handler = () => setModalState(true);
-    const closeHandler = (event) => {
-        setModalState(false)
-    };
-    const videoRef = React.createRef();
-    const canvasRef = React.createRef();
-
-    function showDetections( predictions ) {
-        const ctx = canvasRef.current.getContext("2d");
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-        const font = "24px helvetica";
-        ctx.font = font;
-        ctx.textBaseline = "top";
-
-        predictions.forEach(prediction => {
-            const x = prediction.bbox[0];
-            const y = prediction.bbox[1];
-            const width = prediction.bbox[2];
-            const height = prediction.bbox[3];
-            ctx.strokeStyle = "#2fff00";
-            ctx.lineWidth = 1;
-            ctx.strokeRect(x, y, width, height);
-            ctx.fillStyle = "#2fff00";
-            const textWidth = ctx.measureText(prediction.class).width;
-            const textHeight = parseInt(font, 10);
-            ctx.fillRect(x, y, textWidth, textHeight);
-            ctx.fillRect(x, y + height - textHeight, textWidth, textHeight);
-
-            ctx.fillStyle = "#000000";
-            ctx.fillText(prediction.class, x, y);
-            ctx.fillText(prediction.score.toFixed(2), x, y + height - textHeight);
-        });
-    }
-
-    function detectFromVideoFrame(model, video) {
-        model.detect(video).then(predictions => {
-            showDetections(predictions);
-            requestAnimationFrame(() => {
-                detectFromVideoFrame(model, video);
-            });
-        }, (error) => {
-            console.log("Couldn't start the webcam.");
-            console.error(error);
-        });
-    }
-
+    const [logoDisplay, setLogoDisplay] = useState(logoblack);
+    const [themeType, setThemeType] = useState('light');
+    const mode = useLightSwitch();
     useEffect(() => {
-        if (navigator.mediaDevices.getUserMedia) {
-            const webcamPromise = navigator.mediaDevices
-                .getUserMedia({
-                    video: true,
-                    audio: false,
-                })
-                .then(stream => {
-                    window.stream = stream;
-                    videoRef.current.srcObject = stream;
-
-                    return new Promise(resolve => {
-                        videoRef.current.onloadedmetadata = () => {
-                            resolve();
-                        };
-                    });
-                }, (error) => {
-                    console.log("Couldn't start the webcam");
-                    console.error(error);
-                });
-
-            const loadModelPromise = cocoSsd.load();
-
-            Promise.all([loadModelPromise, webcamPromise])
-                .then(values => {
-                    detectFromVideoFrame(values[0], videoRef.current);
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+        if (mode === Mode.Dark) {
+            setThemeType('dark');
+            setLogoDisplay(logowhite);
+        } else {
+            setThemeType('light');
+            setLogoDisplay(logoblack);
         }
-    });
+    },[mode]);
 
     return (
-        <div className="content">
-            <MobileBlock />
-            <Modal open={modalState} onClose={closeHandler}>
-                <Modal.Title>Warning</Modal.Title>
-                <Modal.Content>
-                    <p>You'll be redirected to GitHub.</p>
-                </Modal.Content>
-                <Modal.Action passive>Cancel</Modal.Action>
-                <Modal.Action onClick={() => {window.location.href = 'https://github.com/genesis331/objectdetection';}}>OK</Modal.Action>
-            </Modal>
-            <section className="header">
-                <div className="header-grid">
-                    <div style={{'textAlign': 'left','height': '100%'}}>
-                        <div className="header-contents">
-                            <img src={zixuLogo} alt="zixuLogo" draggable={false} style={{'height': '2.8rem','verticalAlign': 'middle','marginRight': '2rem'}}/>
-                            <div style={{'display': 'inline-block','verticalAlign': 'middle'}}>
-                                <Text h4 style={{'fontFamily': 'Volte Bold', 'margin': '0'}}>AI Experiments</Text>
-                                <Text h5 style={{'margin': '0'}}>TFJS Experiment - Object Detection</Text>
-                            </div>
-                        </div>
-                    </div>
-                    <div style={{'textAlign': 'right','height': '100%'}}>
-                        <div className="header-contents">
-                            <Button auto onClick={handler}><img src={githubBtnIcon} alt="moon" style={{'height': '1rem','verticalAlign': 'middle','paddingRight': '0.5rem'}}/><span style={{'verticalAlign': 'middle'}}> See Page Source Code</span></Button>
-                        </div>
+        <GeistProvider theme={{ type: themeType }}>
+            <CssBaseline />
+            <div className="base">
+                <div className="mobile-block">
+                    <div className="mobile-block-center">
+                        <AlertOctagon size="4rem"/>
+                        <Text h5>Unsupported device detected</Text>
+                        <Spacer/>
+                        <Note type="secondary" small>Visit this website in a larger screen device.</Note>
                     </div>
                 </div>
-            </section>
-            <section className="video-canvas">
-                <div className="video-canvas-box">
-                    <video
-                        autoPlay
-                        muted
-                        ref={videoRef}
-                        width="720"
-                        height="500"
-                    />
-                </div>
-                <div className="video-canvas-box">
-                    <canvas ref={canvasRef} width="720" height="500" />
-                </div>
-            </section>
-            <section className="footer">
-                <div className="footer-grid">
-                    <div style={{'textAlign': 'left','height': '100%'}}>
-                        <div className="footer-contents">
-                            <Text h6>
-                                Note: This project runs on the client side ONLY, which means that nobody else will be able to see or record the image coming from your webcam.
-                            </Text>
+                <div className="header">
+                    <div className="header-1">
+                        <div className="header-1-logo">
+                            <img src={logoDisplay} alt="Logo" draggable={false}/>
+                        </div>
+                        <div className="header-1-title">
+                            <Description title="AI Experiments" content={<Text b size="1.25rem">TFJS Experiment - Object Detection</Text>}/>
                         </div>
                     </div>
-                    <div style={{'textAlign': 'right','height': '100%'}}>
-                        <div className="footer-contents">
-                            <img src={tensorflowIcon} alt="tensorflowIcon" draggable={false} />
-                        </div>
+                    <div className="header-2">
+                    
                     </div>
                 </div>
-            </section>
-        </div>
+                <div className="project-content">
+                    <Tabs initialValue="1" style={{ width: "100%", height: "100%" }}>
+                        <Tabs.Item label={<Text h6>Overview</Text>} value="1">
+                            <Overview />
+                        </Tabs.Item>
+                        <Tabs.Item label={<Text h6>Project</Text>} value="2">
+                            <Project />
+                        </Tabs.Item>
+                    </Tabs>
+                </div>
+            </div>
+        </GeistProvider>
     );
 }
 
