@@ -1,26 +1,24 @@
 {
   "files": {
-    "main.css": "/objectdetection/static/css/main.c0a069ad.chunk.css",
-    "main.js": "/objectdetection/static/js/main.14d98f62.chunk.js",
-    "main.js.map": "/objectdetection/static/js/main.14d98f62.chunk.js.map",
-    "runtime-main.js": "/objectdetection/static/js/runtime-main.0b1d3be9.js",
-    "runtime-main.js.map": "/objectdetection/static/js/runtime-main.0b1d3be9.js.map",
-    "static/js/2.57c4e0fd.chunk.js": "/objectdetection/static/js/2.57c4e0fd.chunk.js",
-    "static/js/2.57c4e0fd.chunk.js.map": "/objectdetection/static/js/2.57c4e0fd.chunk.js.map",
+    "main.css": "/objectdetection/static/css/main.ca2da39a.chunk.css",
+    "main.js": "/objectdetection/static/js/main.b6946eae.chunk.js",
+    "main.js.map": "/objectdetection/static/js/main.b6946eae.chunk.js.map",
+    "runtime-main.js": "/objectdetection/static/js/runtime-main.05a02945.js",
+    "runtime-main.js.map": "/objectdetection/static/js/runtime-main.05a02945.js.map",
+    "static/js/2.afeb4df0.chunk.js": "/objectdetection/static/js/2.afeb4df0.chunk.js",
+    "static/js/2.afeb4df0.chunk.js.map": "/objectdetection/static/js/2.afeb4df0.chunk.js.map",
     "index.html": "/objectdetection/index.html",
-    "precache-manifest.71a77f9bfb9b5787a42a9c828a3f13ea.js": "/objectdetection/precache-manifest.71a77f9bfb9b5787a42a9c828a3f13ea.js",
+    "precache-manifest.24353adf7324da37e6a966ec5c1feebf.js": "/objectdetection/precache-manifest.24353adf7324da37e6a966ec5c1feebf.js",
     "service-worker.js": "/objectdetection/service-worker.js",
-    "static/css/main.c0a069ad.chunk.css.map": "/objectdetection/static/css/main.c0a069ad.chunk.css.map",
-    "static/js/2.57c4e0fd.chunk.js.LICENSE.txt": "/objectdetection/static/js/2.57c4e0fd.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/objectdetection/static/media/VolteBold.32ec5488.otf",
-    "static/media/githubBtnIcon.svg": "/objectdetection/static/media/githubBtnIcon.92c90f33.svg",
-    "static/media/tensorflowIcon.svg": "/objectdetection/static/media/tensorflowIcon.65eb0388.svg",
-    "static/media/zixuLogo.svg": "/objectdetection/static/media/zixuLogo.e0852cb2.svg"
+    "static/css/main.ca2da39a.chunk.css.map": "/objectdetection/static/css/main.ca2da39a.chunk.css.map",
+    "static/js/2.afeb4df0.chunk.js.LICENSE.txt": "/objectdetection/static/js/2.afeb4df0.chunk.js.LICENSE.txt",
+    "static/media/LOGO-BLACK-WEB.svg": "/objectdetection/static/media/LOGO-BLACK-WEB.bc966552.svg",
+    "static/media/LOGO-WHITE-WEB.svg": "/objectdetection/static/media/LOGO-WHITE-WEB.e0852cb2.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b1d3be9.js",
-    "static/js/2.57c4e0fd.chunk.js",
-    "static/css/main.c0a069ad.chunk.css",
-    "static/js/main.14d98f62.chunk.js"
+    "static/js/runtime-main.05a02945.js",
+    "static/js/2.afeb4df0.chunk.js",
+    "static/css/main.ca2da39a.chunk.css",
+    "static/js/main.b6946eae.chunk.js"
   ]
 }
